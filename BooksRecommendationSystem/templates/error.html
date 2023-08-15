@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendar System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    .text-white{
+        color: white;
+    }
+
+    /* Change anchor tag color to black */
+    a {
+        color: black    !important;
+    }
+    
+</style>
+<body style="background-color: black;">
+    
+    <!-- Navigation Bar -->
+
+    <nav class="navbar" style="background-color: #00a65a; display: flex;justify-content: center;">
+        <h1 class="navbar-brand" style="font-size: 40px; ">My Book Recommender</h1>
+        <ul class="nav navbar-nav " style="color: black;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+        </ul>
+    </nav>
+
+    <!-- Book Container -->
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-white" style="margin-top: 50px ;text-align: center;">Please Enter a Valid Input</h3>
+                <form style="text-align: center; margin-top: 10px;" action="/recommend_books" method="POST">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <input style="width: 600px;" name="user_input" type="text" class="form-control"><br>
+                    </div>
+                    <input type="submit" style="margin-top: 2px;" class="btn btn-warning">
+                </form> 
+            </div>
+            
+
+            
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

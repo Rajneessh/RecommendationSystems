@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendar System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    .text-white{
+        color: white;
+    }
+
+    /* Change anchor tag color to black */
+    a {
+        color: black    !important;
+    }
+    
+</style>
+<body style="background-color: black;">
+    
+    <!-- Navigation Bar -->
+
+    <nav class="navbar" style="background-color: #00a65a; display: flex;justify-content: center;">
+        <h1 class="navbar-brand" style="font-size: 40px; ">My Book Recommender</h1>
+        <ul class="nav navbar-nav " style="color: black;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+        </ul>
+    </nav>
+
+    <!-- Book Container -->
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-white" style="font-size: 50px; text-align: center;">Top 50 Books</h1>
+            </div>
+            
+
+            {% for i in range(book_name|length) %}
+                <div class="col-md-3" style="margin-top: 50px; width: 200px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{image[i]}}" alt="">
+                            <p style="margin-top: 10px;">{{book_name[i]}}</p>
+                            <p>{{author[i]}}</p>
+                            <p>Votes: {{votes[i]}}</p>
+                            <p>{{ratings[i]}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+1. Filtering Users:
+    Users > 200 book reviews
+2. Famous Books:
+    Books > 50 user ratings
+3. User-item matrix:
+    plot a pivot table with book as rows and users as columns. [book][user] > 0 means user reviewed the book
+4. Cosine Similarity:
+    pivot table plots vectors then so cosine similarity can compute the correlation between books and user ratings 
+5. Recommendor:
+    it will recommend most similiar books after taking input from user
